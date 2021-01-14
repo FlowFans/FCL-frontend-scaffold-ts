@@ -19,7 +19,8 @@ const colors = {
     dark:'black'
   },
   border:{
-
+    light:'gray',
+    dark:'gray'
   },
   text:{
     light:'black',
