@@ -1,18 +1,16 @@
 import * as React from "react";
 
-import { FaMoon, FaSun } from "react-icons/fa";
-import { Box, Flex, Spacer } from "@chakra-ui/react";
-import { useThemeManager } from "../../state/user/hooks";
+import { Box, Flex, Spacer, useColorMode } from "@chakra-ui/react";
 import { ColorModeSwitcher } from "../ColorModeSwitcher";
 
 type HeaderProps = {};
 
 const Header = (props: HeaderProps) => {
-  const [theme] = useThemeManager()
+  const {colorMode} = useColorMode()
   
   return (
     <>
-      <Flex borderBottom='1px' borderBottomColor={`border.${theme}`} >
+      <Flex borderBottom='1px' borderBottomColor={`border.${colorMode}`} >
         <Box p='4'>
           logo
         </Box>
